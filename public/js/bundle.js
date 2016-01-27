@@ -44,11 +44,38 @@
 /* 0 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 
-	function cats(number) {
-	  console.log(number);
-	};
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var App = function () {
+	  function App() {
+	    var _this = this;
+
+	    _classCallCheck(this, App);
+
+	    this.button = document.getElementById('clickFunction');
+
+	    this.button.addEventListener('click', function () {
+	      return _this.handleClick();
+	    });
+	  }
+
+	  _createClass(App, [{
+	    key: 'handleClick',
+	    value: function handleClick() {
+	      console.log('This is working!');
+	    }
+	  }]);
+
+	  return App;
+	}();
+
+	window.addEventListener('load', function () {
+	  return new App();
+	});
 
 /***/ }
 /******/ ]);
