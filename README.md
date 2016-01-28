@@ -1,2 +1,3 @@
 # ME1555
-JEsper qas here
+
+Fixed node_modules and gitingore correct.
