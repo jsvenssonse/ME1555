@@ -44,11 +44,50 @@
 /* 0 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 
-	function cats(number) {
-	  console.log(number);
-	};
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var App = function () {
+	  function App() {
+	    var _this = this;
+
+	    _classCallCheck(this, App);
+
+	    this.button = document.getElementById('clickFunction');
+	    this.button.addEventListener('click', function () {
+	      return _this.handleClick();
+	    });
+	    this.buildUi();
+	  }
+
+	  _createClass(App, [{
+	    key: 'buildUi',
+	    value: function buildUi() {
+	      var template = '<div id="appContainer">\n                        <div id="top-section">\n                          <span class="icon">1</span>\n                          <span class="icon">2</span>\n                          <span class="icon">3</span>\n                          <span class="icon">4</span>\n                        </div>\n                        <div id="codeWrap">\n                          <textarea></textarea>\n                        </div>\n                      </div>';
+	      var appDiv = document.querySelector('#container');
+	      if (appDiv) {
+	        appDiv.innerHTML = template;
+	      } else {
+	        console.log('div #container not found');
+	        return;
+	      }
+	    }
+	  }, {
+	    key: 'handleClick',
+	    value: function handleClick() {
+	      console.log('This is working!');
+	    }
+	  }]);
+
+	  return App;
+	}();
+
+	window.addEventListener('load', function () {
+	  return new App();
+	});
 
 /***/ }
 /******/ ]);
