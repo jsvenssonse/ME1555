@@ -1,7 +1,5 @@
   class App {
     constructor() {
-        this.button = document.getElementById('clickFunction');
-        this.button.addEventListener('click', () => this.handleClick());
         this.buildUi();
     }
 
@@ -14,9 +12,9 @@
                           <span class="icon">4</span>
                         </div>
                         <div id="codeWrap">
-                          <textarea></textarea>
+                          <textarea placeholder="Write your code here!"></textarea>
                         </div>
-                      </div>`
+                      </div>`;
       let appDiv = document.querySelector('#container');
       if(appDiv){
           appDiv.innerHTML = template;
@@ -26,9 +24,6 @@
       }
     }
 
-    handleClick() {
-      console.log('This is working!');
-    }
   }
 
   window.addEventListener('load', () => new App());
