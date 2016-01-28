@@ -12,9 +12,9 @@
                           <span class="icon">4</span>
                         </div>
                         <div id="codeWrap">
-                          <textarea></textarea>
+                          <textarea placeholder="Write your code here!"></textarea>
                         </div>
-                      </div>`
+                      </div>`;
       let appDiv = document.querySelector('#container');
       if(appDiv){
           appDiv.innerHTML = template;
@@ -23,6 +23,7 @@
         return;
       }
     }
+
   }
 
   window.addEventListener('load', () => new App());
