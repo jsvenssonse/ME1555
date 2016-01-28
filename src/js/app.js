@@ -1,7 +1,5 @@
   class App {
     constructor() {
-        this.button = document.getElementById('clickFunction');
-        this.button.addEventListener('click', () => this.handleClick());
         this.buildUi();
     }
 
@@ -24,10 +22,6 @@
         console.log('div #container not found');
         return;
       }
-    }
-
-    handleClick() {
-      console.log('This is working!');
     }
   }
 

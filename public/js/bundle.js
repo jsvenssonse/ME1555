@@ -52,14 +52,8 @@
 
 	var App = function () {
 	  function App() {
-	    var _this = this;
-
 	    _classCallCheck(this, App);
 
-	    this.button = document.getElementById('clickFunction');
-	    this.button.addEventListener('click', function () {
-	      return _this.handleClick();
-	    });
 	    this.buildUi();
 	  }
 
@@ -74,11 +68,6 @@
 	        console.log('div #container not found');
 	        return;
 	      }
-	    }
-	  }, {
-	    key: 'handleClick',
-	    value: function handleClick() {
-	      console.log('This is working!');
 	    }
 	  }]);
 
