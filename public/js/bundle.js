@@ -52,15 +52,21 @@
 
 	var App = function () {
 	  function App() {
+	    var _this = this;
+
 	    _classCallCheck(this, App);
 
+	    this.button = document.getElementById('clickFunction');
+	    this.button.addEventListener('click', function () {
+	      return _this.handleClick();
+	    });
 	    this.buildUi();
 	  }
 
 	  _createClass(App, [{
 	    key: 'buildUi',
 	    value: function buildUi() {
-	      var template = '<div id="appContainer">\n                        <div id="top-section">\n                          <span class="icon">1</span>\n                          <span class="icon">2</span>\n                          <span class="icon">3</span>\n                          <span class="icon">4</span>\n                        </div>\n                        <div id="codeWrap">\n                          <textarea placeholder="Write your code here!"></textarea>\n                        </div>\n                      </div>';
+	      var template = '<div id="appContainer">\n                        <div id="top-section">\n                          <span class="icon">1</span>\n                          <span class="icon">2</span>\n                          <span class="icon">3</span>\n                          <span class="icon">4</span>\n                        </div>\n                        <div id="codeWrap">\n                          <textarea></textarea>\n                        </div>\n                      </div>';
 	      var appDiv = document.querySelector('#container');
 	      if (appDiv) {
 	        appDiv.innerHTML = template;
@@ -68,6 +74,11 @@
 	        console.log('div #container not found');
 	        return;
 	      }
+	    }
+	  }, {
+	    key: 'handleClick',
+	    value: function handleClick() {
+	      console.log('This is working!');
 	    }
 	  }]);
 
