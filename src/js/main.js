@@ -1,4 +1,4 @@
-  class App {
+  class Main {
     constructor() {
         this.buildUi();
     }
@@ -26,4 +26,4 @@
 
   }
 
-  window.addEventListener('load', () => new App());
+  window.addEventListener('load', () => new Main());
