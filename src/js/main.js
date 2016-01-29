@@ -1,3 +1,4 @@
+import { defaultTheme } from './themes/defaultTheme';
 class Main {
      constructor() {
          this.buildUi();
@@ -12,12 +13,13 @@ class Main {
                            <span class="icon">4</span>
                          </div>
                          <div id="codeWrap">
-                           <textarea placeholder="Write your code here!"></textarea>
+                           <textarea id="code" placeholder="Write your code here!"></textarea>
                          </div>
                        </div>`;
        let appDiv = document.querySelector('#container');
        if(appDiv){
            appDiv.innerHTML = template;
+           defaultTheme();
        } else {
          console.log('div #container not found');
          return;
