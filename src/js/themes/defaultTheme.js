@@ -3,6 +3,7 @@ export function defaultTheme () {
   const topSection = document.querySelector('#top-section');
   const codeWrap = document.querySelector('#codeWrap');
   const textarea = document.querySelector('#code');
+  const button = document.querySelector('#button');
   const icon = document.querySelectorAll('.icon');
 
   //AppContainer styles
@@ -28,7 +29,9 @@ export function defaultTheme () {
   textarea.style.backgroundColor = 'rgb(42, 45, 46)';
   textarea.style.color = 'rgb(130, 130, 130)';
   textarea.style.padding = '5px';
-
+  
+  //Button style 
+  button.style.height = '100%';
   //Icon styles
   for (var i = 0; i <= icon.length; i++) {
     if(typeof icon[i] === 'undefined'){
