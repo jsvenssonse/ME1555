@@ -4,6 +4,9 @@ export function defaultTheme () {
   const codeWrap = document.querySelector('#codeWrap');
   const textarea = document.querySelector('#code');
   const icon = document.querySelectorAll('.icon');
+  const post = document.querySelector('.post');
+  const language = document.querySelector('.language');
+  const right = document.querySelector('.right');
 
   //AppContainer styles
   appContainer.style.height = '20%';
@@ -29,16 +32,33 @@ export function defaultTheme () {
   textarea.style.color = 'rgb(130, 130, 130)';
   textarea.style.padding = '5px';
 
+  // Post button styles
+  post.style.height = '100%';
+  post.style.width = '50px';
+  post.style.background = 'orange';
+  post.style.color = 'white';
+  post.style.textAlign = 'center';
+  post.style.lineHeight = '30px';
+  post.style.textTransform = 'uppercase';
+
+  // Language Selector styles
+  language.style.height = '100%';
+  language.style.width = '100px';
+
+  //Float right fix
+  right.style.cssFloat = 'right';
+
   //Icon styles
   for (var i = 0; i <= icon.length; i++) {
     if(typeof icon[i] === 'undefined'){
       return false;
-    }
+    };
     icon[i].style.height = '100%';
     icon[i].style.cssFloat = 'left';
     icon[i].style.padding = '0 10px 0 10px';
     icon[i].style.textAlign = 'center';
     icon[i].style.lineHeight = '30px';
     icon[i].style.color = 'white';
-  }
+  };
+
 };
