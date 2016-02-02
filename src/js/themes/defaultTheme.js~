@@ -9,7 +9,7 @@ export function defaultTheme () {
   const right = document.querySelector('.right');
 
   //AppContainer styles
-  appContainer.style.height = '30%';
+  appContainer.style.height = '20%';
   appContainer.style.width = '30%';
   appContainer.style.backgroundColor = 'rgb(42, 45, 46)';
 
