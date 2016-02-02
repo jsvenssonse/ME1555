@@ -1,4 +1,4 @@
-import { defaultTheme } from './themes/defaultTheme';
+import { defaultTheme } from './themes/defaultTheme.js';
 import { request } from './components/api.js';
 class Main {
      constructor() {
