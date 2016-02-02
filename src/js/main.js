@@ -14,6 +14,10 @@ class Main {
                            <span class="icon">3</span>
                            <span class="icon">4</span>
                          </div>
+                         <select name="lang">
+                            <option value="php">PHP</option>
+                            <option value="js">Javascript</option>
+                        </select>
                          <div id="codeWrap">
                            <textarea id="code" placeholder="Write your code here!"></textarea>
                          </div>
