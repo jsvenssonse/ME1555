@@ -1,7 +1,5 @@
-# ME1555
-<<<<<<< HEAD
-Kevin har varit här
-=======
 
-Fixed node_modules and gitingore correct.
->>>>>>> master
+# ME1555
+
+Kevin har varit här
+
