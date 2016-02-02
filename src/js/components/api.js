@@ -1,3 +1,6 @@
+
+/*Issue is i cant access the proper children, so continue 
+ to console log to do the order properly in the loop */
 export function requestBody(e) {
     let form = document.getElementById('form').reset(),
         values = [];
