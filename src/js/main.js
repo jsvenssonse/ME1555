@@ -1,7 +1,9 @@
-import { defaultTheme } from './themes/defaultTheme';
+import prism from './libraries/prism';
+import { defaultTheme, cats } from './themes/defaultTheme';
 class Main {
      constructor() {
          this.buildUi();
+         console.log(prism);
      }
 
      buildUi(){
@@ -22,11 +24,15 @@ class Main {
                          <div id="codeWrap">
                            <textarea id="code" placeholder="Write your code here!"></textarea>
                          </div>
-                       </div>`;
+                       </div>
+                       <pre><code class="language-javascript">function hello() {
+                         console.log('hell0');
+                       }</code></pre>`;
        let appDiv = document.querySelector('#container');
        if(appDiv){
            appDiv.innerHTML = template;
            defaultTheme();
+           cats();
        } else {
          console.log('div #container not found');
          return;
