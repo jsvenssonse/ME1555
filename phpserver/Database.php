@@ -22,8 +22,7 @@ class Database{
     }
 
     private function LoadXml(){
-        $this->xml = simplexml_load_file(Database::xmlfile);
-        var_dump(libxml_get_errors());
+        $this->xml = simplexml_load_file(Database::xmlfile) or die("xml file not loaded");
     }
 
     public function ReadXml(){
