@@ -1,6 +1,10 @@
 export function postFunc(codeLanguage, code) {
-    console.log(codeLanguage);
-    console.log(code);
+    var codeWrapper = document.querySelector('#codeWrapper');
+    codeWrapper.innerHTML = `<pre><code class="language-${codeLanguage}">
+                                  ${code}
+                            </code></pre>`;
+
+
     kevinFunc(codeLanguage);
 };
 

@@ -10,11 +10,12 @@ class Main {
      buildUi(){
        let template = `<div id="appContainer">
                          <div id="top-section">
-                           <span class="icon">1</span>
-                           <span class="icon">2</span>
+                           <span class="icon fa fa-bold"></span>
+                           <span class="icon fa fa-italic"></span>
                            <span class="icon">3</span>
                            <span class="icon">4</span>
                            <span class="post right">Post</span>
+                           <span class="icon icon-code fa fa-file-code-o"></span>
                            <select class="language right" value="javascript">
                             <option value="javascript">Javascript</option>
                             <option value="php">PHP</option>
