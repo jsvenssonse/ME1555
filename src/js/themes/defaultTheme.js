@@ -62,7 +62,3 @@ export function defaultTheme () {
   };
 
 };
-
-export function cats() {
-  console.log('hello');
-}

@@ -1,5 +1,6 @@
 import prism from './libraries/prism';
-import { defaultTheme, cats } from './themes/defaultTheme';
+import { postFunc } from './components/post';
+import { defaultTheme } from './themes/defaultTheme';
 class Main {
      constructor() {
          this.buildUi();
@@ -14,7 +15,7 @@ class Main {
                            <span class="icon">3</span>
                            <span class="icon">4</span>
                            <span class="post right">Post</span>
-                           <select class="language right">
+                           <select class="language right" value="javascript">
                             <option value="javascript">Javascript</option>
                             <option value="php">PHP</option>
                             <option value="python">Python</option>
@@ -24,15 +25,21 @@ class Main {
                          <div id="codeWrap">
                            <textarea id="code" placeholder="Write your code here!"></textarea>
                          </div>
-                       </div>
-                       <pre><code class="language-javascript">function hello() {
-                         console.log('hell0');
-                       }</code></pre>`;
+                       </div>`;
        let appDiv = document.querySelector('#container');
        if(appDiv){
            appDiv.innerHTML = template;
            defaultTheme();
-           cats();
+           let codeLanguage = document.querySelector('.language');
+           let code = document.querySelector('#code');
+           let post = document.querySelector('.post');
+           post.addEventListener('click', function() {
+             if (code.value === '') {
+               return false;
+             }
+             postFunc(codeLanguage.value, code.value);
+             //codeLanguage.value, code.value
+           });
        } else {
          console.log('div #container not found');
          return;
