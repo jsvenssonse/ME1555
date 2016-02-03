@@ -37,9 +37,8 @@ class Main {
          return;
        }
 
-        let submit = document.querySelector('#container');
-         if(submit) {
-            submit.addEventListener('submit', requestBody());  
+         if(appDiv) {
+            appDiv.addEventListener('submit', requestBody);
          }
          
             
