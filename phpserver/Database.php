@@ -10,8 +10,7 @@ class Database{
         //Start DB Connection here
     }
 
-    public function SaveXml($obj){
-        $lang = $obj->lang;
+    public function SaveXml($lang){
         if(intval($this->xml->$lang[total]) !== 0){
             $total = intval($this->xml->$lang[total]);
             $this->xml->$lang[total] = $total + 1;

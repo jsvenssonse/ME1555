@@ -12,8 +12,7 @@ class Core{
     }
     //
     public function Fetch($string){
-        $this->json = json_decode($string);
-        $this->Save();
+        $this->Save($string);
     }
 
     private function Save(){
