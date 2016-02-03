@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin: *");
+echo header("Access-Control-Allow-Origin: *");
 require_once __DIR__ . '/Core.php';
 
 $Core = new Core();
@@ -10,12 +10,12 @@ $Core->Fetch($_POST['json']);
 
 var_dump(file_get_contents("php://input"));
 
-echo '<hr>'
+echo '<hr>';
 
 var_dump($_POST);
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     //only if post exist
-    $Core->Fetch($_POST['json']);
+    //$Core->Fetch($_POST['json']);
     //else use this
     //$Core->Fetch(json_decode(file_get_contents("php://input")));
 } else {
