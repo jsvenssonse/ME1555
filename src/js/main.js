@@ -1,8 +1,10 @@
-import { defaultTheme } from './themes/defaultTheme.js';
-import { requestBody } from './components/api.js';
+import prism from './libraries/prism';
+import { postFunc } from './components/post';
+import { defaultTheme } from './themes/defaultTheme';
 class Main {
      constructor() {
          this.buildUi();
+         console.log(prism);
      }
 
      buildUi(){
@@ -32,6 +34,16 @@ class Main {
        if(appDiv){
            appDiv.innerHTML = template;
            defaultTheme();
+           let codeLanguage = document.querySelector('.language');
+           let code = document.querySelector('#code');
+           let post = document.querySelector('.post');
+           post.addEventListener('click', function() {
+             if (code.value === '') {
+               return false;
+             }
+             postFunc(codeLanguage.value, code.value);
+             //codeLanguage.value, code.value
+           });
        } else {
          console.log('div #container not found');
          return;
