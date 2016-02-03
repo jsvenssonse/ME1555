@@ -11,6 +11,7 @@ class Database{
     }
 
     public function SaveXml($lang){
+        var_dump($lang);
         if(intval($this->xml->$lang[total]) !== 0){
             $total = intval($this->xml->$lang[total]);
             $this->xml->$lang[total] = $total + 1;

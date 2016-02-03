@@ -10,13 +10,9 @@ class Core{
         require_once __DIR__ . '/Database.php';
         $this->_DB = new Database();
     }
-    //
-    public function Fetch($string){
-        $this->Save($string);
-    }
 
-    private function Save(){
-        $this->_DB->SaveXml($this->json);
+    public function Save($string){
+        $this->_DB->SaveXml($string);
     }
 
     public function DisplayXml(){
