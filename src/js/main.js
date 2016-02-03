@@ -1,4 +1,5 @@
 import { defaultTheme } from './themes/defaultTheme';
+
 class Main {
      constructor() {
          this.buildUi();
@@ -7,28 +8,31 @@ class Main {
      buildUi(){
        let template = `<div id="appContainer">
                          <div id="top-section">
-                           <span class="icon">1</span>
-                           <span class="icon">2</span>
+                           <span class="icon fa fa-bold"></span>
+                           <span class="icon fa fa-italic"></span>
                            <span class="icon">3</span>
                            <span class="icon">4</span>
+                           <span class="icon">5</span>
                            <span class="post right">Post</span>
+                           <span class="icon icon-code fa fa-file-code-o"></span>
                            <select class="language right">
                             <option value="javascript">Javascript</option>
                             <option value="php">PHP</option>
                             <option value="python">Python</option>
                             <option value="java">java</option>
                           </select>
+                          <span class="icon fa fa-question right"></span>
                          </div>
                          <div id="codeWrap">
                            <textarea id="code" placeholder="Write your code here!"></textarea>
                          </div>
                        </div>`;
-       let appDiv = document.querySelector('#container');
+       let appDiv = document.querySelector('#codeeditor');
        if(appDiv){
            appDiv.innerHTML = template;
            defaultTheme();
        } else {
-         console.log('div #container not found');
+         console.log('div #codeeditor not found');
          return;
        }
      }
