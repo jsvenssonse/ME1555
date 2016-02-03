@@ -1,4 +1,5 @@
 /node_modules
-/public/js
 /public/prism.css
 /src/js/libraries/*
+/public/js/bundle.js
+
