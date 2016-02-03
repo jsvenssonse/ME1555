@@ -17,7 +17,11 @@ class Core{
     }
 
     private function Save(){
-        $this->_DB->SaveData($json->lang);
+        $this->_DB->SaveXml($this->json);
     }
 
+    public function DisplayXml(){
+        $xml = $this->_DB->ReadXml();
+        include_once 'Display.html';
+    }
 }
