@@ -6,4 +6,5 @@ export function postFunc(codeLanguage, code) {
 
 function kevinFunc(language) {
   console.log('language: ' + language);
+  console.log('Pulla för fan!');
 }
