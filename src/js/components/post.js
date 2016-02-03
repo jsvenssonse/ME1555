@@ -1,10 +1,13 @@
 export function postFunc(codeLanguage, code) {
     console.log(codeLanguage);
     console.log(code);
-    kevinFunc(codeLanguage);
+    post(codeLanguage);
 };
 
-function kevinFunc(language) {
-  console.log('language: ' + language);
-  console.log('Pulla för fan!');
+function post(language) {
+    let http = new XMLHttpRequest();
+    http.open("POST", "http://88.131.100.231:81", true);
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    console.log(language);
+    http.send(language);
 }
