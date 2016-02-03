@@ -1,2 +1,3 @@
 /node_modules
+/src/js/libraries/*
 /public/js/bundle.js
