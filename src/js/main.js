@@ -1,4 +1,4 @@
-import prism from './libraries/prism';
+import prism from './libraries/prism.js';
 import { postFunc } from './components/post';
 import { defaultTheme } from './themes/defaultTheme';
 class Main {
