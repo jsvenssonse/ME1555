@@ -71,8 +71,8 @@
 	  _createClass(Main, [{
 	    key: 'buildUi',
 	    value: function buildUi() {
-	      var template = '<div id="appContainer">\n                         <div id="top-section">\n                           <span class="icon">1</span>\n                           <span class="icon">2</span>\n                           <span class="icon">3</span>\n                           <span class="icon">4</span>\n                           <span class="post right">Post</span>\n                           <select class="language right">\n                            <option value="javascript">Javascript</option>\n                            <option value="php">PHP</option>\n                            <option value="python">Python</option>\n                            <option value="java">java</option>\n                          </select>\n                         </div>\n                         <div id="codeWrap">\n                           <textarea id="code" placeholder="Write your code here!"></textarea>\n                         </div>\n                       </div>';
-	      var appDiv = document.querySelector('#container');
+	      var template = '<div id="appContainer">\n                         <div id="top-section">\n                           <span class="icon fa fa-bold"></span>\n                           <span class="icon fa fa-italic"></span>\n                           <span class="icon">3</span>\n                           <span class="icon">4</span>\n                           <span class="post right">Post</span>\n                           <span class="icon icon-code fa fa-file-code-o"></span>\n                           <select class="language right">\n                            <option value="javascript">Javascript</option>\n                            <option value="php">PHP</option>\n                            <option value="python">Python</option>\n                            <option value="java">java</option>\n                          </select>\n                         </div>\n                         <div id="codeWrap">\n                           <textarea id="code" placeholder="Write your code here!"></textarea>\n                         </div>\n                       </div>';
+	      var appDiv = document.querySelector('#codeeditor');
 	      if (appDiv) {
 	        (function () {
 	          appDiv.innerHTML = template;
@@ -90,7 +90,7 @@
 	          });
 	        })();
 	      } else {
-	          console.log('div #container not found');
+	          console.log('div #codeeditor not found');
 	          return;
 	        }
 	    }
@@ -235,6 +235,9 @@
 	});
 	exports.postFunc = postFunc;
 	function postFunc(codeLanguage, code) {
+	    var codeWrapper = document.querySelector('#codeWrapper');
+	    codeWrapper.innerHTML = "<pre><code class=\"language-" + codeLanguage + "\">\n                                  " + code + "\n                            </code></pre>";
+
 	    console.log(codeLanguage);
 	    console.log(code);
 	    post(codeLanguage);
@@ -267,30 +270,37 @@
 	  var post = document.querySelector('.post');
 	  var language = document.querySelector('.language');
 	  var right = document.querySelector('.right');
+	  var codeeditor = document.querySelector('#codeeditor');
+
+	  //codeeditor
+	  codeeditor.style.height = '400px';
+	  codeeditor.style.width = '100%';
 
 	  //AppContainer styles
-	  appContainer.style.height = '30%';
-	  appContainer.style.width = '30%';
+	  appContainer.style.height = '100%';
+	  appContainer.style.width = '100%';
 	  appContainer.style.backgroundColor = 'rgb(42, 45, 46)';
 
 	  //TopSection styles
-	  topSection.style.height = '30px';
+	  topSection.style.height = '40px';
 	  topSection.style.width = '100%';
 	  topSection.style.borderBottom = '1px solid rgb(130, 130, 130)';
+	  topSection.style.margin = '10px 0px 10px 0px';
 
 	  //CodeWrap styles
 	  codeWrap.style.height = 'calc(100% - 50px)';
 	  codeWrap.style.width = '100%';
 
 	  //TextArea styles
-	  textarea.style.height = '100%';
-	  textarea.style.width = '100%';
+	  textarea.style.height = '95%';
+	  textarea.style.width = '97%';
+	  textarea.style.margin = '0px 15px 0px 10px';
 	  textarea.style.resize = 'none';
 	  textarea.style.outline = 'none';
 	  textarea.style.border = 'none';
 	  textarea.style.backgroundColor = 'rgb(42, 45, 46)';
 	  textarea.style.color = 'rgb(130, 130, 130)';
-	  textarea.style.padding = '5px';
+	  textarea.style.padding = '15px';
 
 	  // Post button styles
 	  post.style.height = '100%';
@@ -314,11 +324,13 @@
 	      return false;
 	    };
 	    icon[i].style.height = '100%';
+	    icon[i].style.width = '50px';
 	    icon[i].style.cssFloat = 'left';
 	    icon[i].style.padding = '0 10px 0 10px';
 	    icon[i].style.textAlign = 'center';
-	    icon[i].style.lineHeight = '30px';
+	    icon[i].style.lineHeight = '40px';
 	    icon[i].style.color = 'white';
+	    //icon[i].style.border = '1px solid white';
 	  };
 	};
 
