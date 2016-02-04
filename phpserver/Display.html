@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Display Saves</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Total uses</h1>
+<?php
+    foreach ($xml as $lang => $value) {
+        echo "<h3><span style='color:blue;'>$lang</span>, total saves $value[total]</h3>";
+    }
+?>
+</body>
+</html>
