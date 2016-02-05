@@ -8,11 +8,11 @@ export function defaultTheme () {
   const language = document.querySelector('.language');
   const right = document.querySelector('.right');
   const codeeditor = document.querySelector('#codeeditor');
-  
+
   //codeeditor
   codeeditor.style.height = '400px';
   codeeditor.style.width = '100%';
-  
+
   //AppContainer styles
   appContainer.style.height = '100%';
   appContainer.style.width = '100%';
