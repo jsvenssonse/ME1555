@@ -1,0 +1,33 @@
+body{
+	background-image: url('http://cdn.wonderfulengineering.com/wp-content/uploads/2014/04/code-wallpaper-3.jpg');
+	background-repeat: none;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+}
+h1{
+	color: #fff;
+	font-size: 50px;
+}
+h3{
+	color: #fff;
+}
+h5{
+	color: #fff;
+}
+.center{
+	text-align: center;
+}
+.first{
+	height: 30vh;
+}
+.second{
+	height: 50vh;
+	/*border: 1px  solid #000;*/
+}
+.third{
+	height: 20vh;
+
+}
+
