@@ -20,14 +20,33 @@ h5{
 	text-align: center;
 }
 .first{
-	height: 70vh;
+	height: 20vh;
 }
 .second{
 	height: 70vh;
 	/*border: 1px  solid #000;*/
 }
 .third{
-	height: 100vh;
+	/*height: 100vh;*/
 
 }
 
+/*Navbar*/
+.navbar{
+	color: #fff;
+	display: block;
+	background-color: #fff;
+	opacity: 0.5;
+}
+.border{
+	border: 2px solid #000;
+}
+
+.zindex{
+	z-index: 100;
+}
+.navbar a{
+	color: #000;
+	font-size: 20px;
+	font-style: bold;
+}
