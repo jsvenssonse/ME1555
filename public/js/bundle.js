@@ -228,7 +228,7 @@
 /* 2 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -236,10 +236,10 @@
 	exports.postFunc = postFunc;
 	function postFunc(codeLanguage, code) {
 	    var codeWrapper = document.querySelector('#codeWrapper');
-	    codeWrapper.innerHTML = "<pre><code class=\"language-" + codeLanguage + "\">\n                                  " + code + "\n                            </code></pre>";
-
+	    codeWrapper.innerHTML = '<pre><code id="codehiglight" class="language-' + codeLanguage + '">\n                                  ' + code + '\n                            </code></pre>';
 	    console.log(codeLanguage);
 	    console.log(code);
+	    Prism.highlightElement(document.getElementById('codehiglight'));
 	    post(codeLanguage);
 	};
 
