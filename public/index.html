@@ -4,55 +4,50 @@
     <meta charset="utf-8">
     <title> Test Bench! </title>
     <link rel="stylesheet" href="prism.css" />
-   <link rel="stylesheet" href="css/foundation.css" />
+   <link rel="stylesheet" href="css/skeleton.css" />
+   <link rel="stylesheet" href="css/normalize.css" />
+   <link rel="stylesheet" href="css/style.css" />
    <link rel="stylesheet" href="css/defaultStyle.css" />
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="css/font-awesome.min.css">
+   <script src="js/jquery-2.2.0.min.js"></script>
   </head>
     <body>
-        <div class="row">
-            <div class="large-12 columns">
-                <nav class="top-bar" data-topbar role="navigation">
-                    <ul class="title-area">
-                        <li class="name">
-                            <h1><a href="#">My Site</a></h1>
-                        </li>
-                        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-                        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-                    </ul>
-                    <section class="top-bar-section">
-                    <!-- Right Nav Section -->
-                        <ul class="right">
-                        <li class="active"><a href="#">Right Button Active</a></li>
-                        <li class="has-dropdown">
-                            <a href="#">Right Button Dropdown</a>
-                            <ul class="dropdown">
-                            <li><a href="#">First link in dropdown</a></li>
-                            <li class="active"><a href="#">Active link in dropdown</a></li>
-                            </ul>
-                        </li>
-                        </ul>
-                        <!-- Left Nav Section -->
-                        <ul class="left">
-                            <li><a href="#">Left Nav Button</a></li>
-                        </ul>
-                    </section>
-                </nav>
-
+    <div class="row first">
+        <div class="container">
+            <div class="row">
+                <div class="twelve column">
+                    <h1 class="center">Code Editor</h1>
+                    <h3 class="center">Built for story-telling others</h3>
+                </div>
             </div>
-            <div class="large-12 columns">
-                wihoo
-            </div>
-            <div class="large-12 columns">
-                <div id="codeeditor"></div>
-            </div>
-            <div id="codeWrapper" class="large-12 column">
+            <div class="row">
+                <div class="twelve columns"> <h5 class="center">
+                    We want to create something that would simplify or improve webbutvecklares way to explain their own code. With the help of being able syntax highlights on or colorize the code, other people can more easily read your code.
+                </h5></div>
             </div>
         </div>
+    </div>
+    <div class="row second">
+        <div class="container">
+            <div class="row">
+                <div class="twelve columns">
+                    <div id="codeeditor"></div>
+                </div>
+                <div class="twelve columns">
+                    <div id="codeWrapper" class="row"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row third">
+        <div class="container">
+            <div class="row">
+                <div class="twelve columns"> <h5>
+
+                </h5></div>
+            </div>
+        </div>
+    </div>
         <script src="js/bundle.js"></script>
-        <script src="js/vendor/jquery.js"></script>
-        <script src="js/foundation.min.js"></script>
-        <script>
-            $(document).foundation();
-        </script>
     </body>
 </html>

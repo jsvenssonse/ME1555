@@ -1,4 +1,4 @@
-import prism from './libraries/prism';
+import prism from './libraries/prism.js';
 import { postFunc } from './components/post';
 import { defaultTheme } from './themes/defaultTheme';
 class Main {
@@ -14,8 +14,8 @@ class Main {
                            <span class="icon fa fa-italic"></span>
                            <span class="icon">3</span>
                            <span class="icon">4</span>
-                           <span class="post right">Post</span>
                            <span class="icon icon-code fa fa-file-code-o"></span>
+                           <span class="post right">Post</span>
                            <select class="language right">
                             <option value="javascript">Javascript</option>
                             <option value="php">PHP</option>

@@ -71,7 +71,7 @@
 	  _createClass(Main, [{
 	    key: 'buildUi',
 	    value: function buildUi() {
-	      var template = '<div id="appContainer">\n                         <div id="top-section">\n                           <span class="icon fa fa-bold"></span>\n                           <span class="icon fa fa-italic"></span>\n                           <span class="icon">3</span>\n                           <span class="icon">4</span>\n                           <span class="post right">Post</span>\n                           <span class="icon icon-code fa fa-file-code-o"></span>\n                           <select class="language right">\n                            <option value="javascript">Javascript</option>\n                            <option value="php">PHP</option>\n                            <option value="python">Python</option>\n                            <option value="java">java</option>\n                          </select>\n                         </div>\n                         <div id="codeWrap">\n                           <textarea id="code" placeholder="Write your code here!"></textarea>\n                         </div>\n                       </div>';
+	      var template = '<div id="appContainer">\n                         <div id="top-section">\n                           <span class="icon fa fa-bold"></span>\n                           <span class="icon fa fa-italic"></span>\n                           <span class="icon">3</span>\n                           <span class="icon">4</span>\n                           <span class="icon icon-code fa fa-file-code-o"></span>\n                           <span class="post right">Post</span>\n                           <select class="language right">\n                            <option value="javascript">Javascript</option>\n                            <option value="php">PHP</option>\n                            <option value="python">Python</option>\n                            <option value="java">java</option>\n                          </select>\n                         </div>\n                         <div id="codeWrap">\n                           <textarea id="code" placeholder="Write your code here!"></textarea>\n                         </div>\n                       </div>';
 	      var appDiv = document.querySelector('#codeeditor');
 	      if (appDiv) {
 	        (function () {
@@ -228,7 +228,7 @@
 /* 2 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -236,10 +236,10 @@
 	exports.postFunc = postFunc;
 	function postFunc(codeLanguage, code) {
 	    var codeWrapper = document.querySelector('#codeWrapper');
-	    codeWrapper.innerHTML = "<pre><code class=\"language-" + codeLanguage + "\">\n                                  " + code + "\n                            </code></pre>";
-
-	    console.log(codeLanguage);
-	    console.log(code);
+	    codeWrapper.innerHTML = '<pre><code id="codehiglight" class="language-' + codeLanguage + '">' + code + '</code></pre>';
+	    //console.log(codeLanguage);
+	    //console.log(code);
+	    Prism.highlightElement(document.getElementById('codehiglight'));
 	    post(codeLanguage);
 	};
 
