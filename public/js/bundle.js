@@ -235,9 +235,6 @@
 	});
 	exports.postFunc = postFunc;
 	function postFunc(codeLanguage, code) {
-	    var codeWrapper = document.querySelector('#codeWrapper');
-	    codeWrapper.innerHTML = "<pre><code class=\"language-" + codeLanguage + "\">\n                                  " + code + "\n                            </code></pre>";
-
 	    console.log(codeLanguage);
 	    console.log(code);
 	    post(codeLanguage);
